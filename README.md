@@ -1,6 +1,24 @@
 # Hightower Practice
 
-## TL;DR
+## Features
+
+- Stationary bots to practice market gardening
+- Teleport around using numpad 0-9 (numpad period `.` to return to spawn)
+- Press `T` for Quick Action: reset you/bots for practicing jumps
+- Control Quick Action using arrow keys LEFT, RIGHT, and DOWN
+- Toggle `noclip` using arrow key UP
+
+## API
+
+- `echoCoords`
+- `heal` (self)
+- `healBots`
+- `kickAllBots`
+- `quickAction`: Repeat last teleport action
+- `resetBots`: Kicks, re-adds, and teleports them
+- `spawnAllBots`: Add bots
+
+## Install & Use TL;DR
 
 1. Install the scripts
 1. Load hightower: `ht`
