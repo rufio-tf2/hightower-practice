@@ -18,7 +18,7 @@
 - `resetBots`: Kicks, re-adds, and teleports them
 - `spawnAllBots`: Add bots
 
-## Install & Use TL;DR
+## TL;DR
 
 1. Install the scripts
 1. Load hightower: `ht`
@@ -67,11 +67,13 @@ You can switch between these whenever you want. They change the bots' spawns (in
 
 **Join team RED**.
 
-### Num Pad
+### Numpad
 
-The num pad teleports you around the map to practice different common jumps.
+_No numpad? See [below](#no-numpad)._
 
-The num pad period key <kbd>.</kbd> (`KP_DEL`) will teleport you to the RED spawn.
+The numpad teleports you around the map to practice different common jumps.
+
+The numpad period key <kbd>.</kbd> (`KP_DEL`) will teleport you to the RED spawn.
 
 - <kbd>1</kbd> and <kbd>4</kbd> spawn you on the BLU side
 - The keys in the middle: <kbd>0</kbd>, <kbd>2</kbd>, <kbd>5</kbd>, and <kbd>8</kbd> spawn you around the hightower
@@ -82,11 +84,11 @@ All of the keys respawn the bots to their starting locations.
 
 ### Quick Action
 
-This script creates a `quickAction` that you can bind to a key. **By default `quickAction` is bound to <kbd>T</kbd>** `quickAction` by default teleports you to your last spawn (changed using the num pad keys) and it resets the bots health and locations.
+This script creates a `quickAction` that you can bind to a key. **By default `quickAction` is bound to <kbd>T</kbd>** `quickAction` by default teleports you to your last spawn (changed using the numpad keys) and it resets the bots health and locations.
 
-#### Arrow Keys
+### Arrow Keys
 
-You can use the arrow keys to control what `quickAction` does, or use `UPARROW` to toggle noclip:
+You can use the arrow keys to control what `quickAction` does, or use `UPARROW` to toggle `noclip`:
 
 - DOWNARROW: QA moves you and bots (default)
 - LEFTARROW: QA only moves bots
@@ -106,7 +108,7 @@ This script usurps a lot of your key bindings:
 
 - <kbd>T</kbd>
 - <kbd>MOUSE1</kbd> (heals you with every fire)
-- Num pad keys
+- Numpad keys
 - Arrow keys
 
 You should update [defaults.cfg](./defaults.cfg) to return these keys to the default behavior that you want when not using this script.
@@ -118,11 +120,17 @@ For example, I use the <kbd>T</kbd> key to toggle my viewmodel.
 bind T r_drawviewmodel
 ```
 
-I use the arrow keys to switch loadouts. I use the num pad keys to switch classes. **If you use any of those keys in your normal gameplay, you'll need to set them to YOUR defaults.**
+I use the arrow keys to switch loadouts. I use the numpad keys to switch classes. **If you use any of those keys in your normal gameplay, you'll need to set them to YOUR defaults.**
 
 ## Troubleshooting
 
-If shit goes cray, try reloading the stage:
+### You can't move
+
+If you're using a VPK config, a few different things could go wrong. One user found that his VPK config had its own, conflicting `listenserver.cfg` file.
+
+### Bots aren't teleporting correctly
+
+Try reloading the stage:
 
 ```go
 htez
@@ -130,8 +138,36 @@ htez
 htog
 ```
 
-Or try resetting the bots using the `resetBots` command:
+Also, try resetting the bots using the `resetBots` command:
 
 ```go
 resetBots
+```
+
+### No Numpad
+
+If you don't have a numpad, open up [load.cfg](./hightower-practice/load.cfg) and uncomment the line as indicated:
+
+```go
+// No Numpad?
+// Uncomment the following line to use alternative hotkeys:
+alias no_numpad_setting "exec scripts/hightower-practice/base/no-numpad; echo NO NUMPAD;"
+```
+
+Then, open [defaults.cfg](./hightower-practice/defaults.cfg) and uncomment those lines. Be sure to adjust any non-default bindings for which you use those keys:
+
+```go
+// No Numpad?
+// Uncomment:
+// bind "-" disguiseteam
+// bind "=" ""
+// bind BACKSPACE ""
+// bind HOME ""
+// bind END centerview
+// bind 6 slot6
+// bind 7 slot7
+// bind 8 slot8
+// bind 9 slot9
+// bind 0 slot10
+// bind DEL ""
 ```
