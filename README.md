@@ -87,7 +87,7 @@ All of the keys respawn the bots to their starting locations.
 
 ### Quick Action
 
-This script creates a `quickAction` that you can bind to a key. **By default `quickAction` is bound to <kbd>T</kbd>** `quickAction` by default teleports you to your last spawn (changed using the numpad keys) and it resets the bots health and locations.
+This script creates a `quickAction` that you can bind to a key. **By default `quickAction` is bound to <kbd>T</kbd>**. `quickAction` teleports you to your last spawn (changed using the numpad keys) and it resets the bots health and locations. This can be changed using the arrow keys (see below).
 
 ### Arrow Keys
 
