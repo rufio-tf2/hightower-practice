@@ -1,32 +1,26 @@
 # Hightower Practice
 
-## Features
+Place stationary bots around Hightower to practice market gardening.
 
-- Stationary bots to practice market gardening
-- Teleport around using numpad 0-9 (numpad period `.` to return to spawn)
-- Press `T` for Quick Action: reset you/bots for practicing jumps
-- Control Quick Action using arrow keys LEFT, RIGHT, and DOWN
-- Toggle `noclip` using arrow key UP
+**Join team RED**.
 
 ## API
 
-- `echoCoords`
+- `tp_1` - `tp_9`: Teleport to different locations around the map
+- `tp_spawn`: Teleport to Red spawn
 - `heal` (self)
 - `healBots`
 - `kickAllBots`
-- `quickAction`: Repeat last teleport action
 - `resetBots`: Kicks, re-adds, and teleports them
 - `spawnAllBots`: Add bots
+- `quickAction`: Repeat last teleport action
+- `echoCoords`
 
 ## TL;DR
 
 1. Install the scripts
-1. Load hightower: `ht`
-1. Load different "stages" (currently only two available): `htez` or `htog`
-1. Numpad keys teleport you around the map
-1. Use `T` (or change it) to use `quickAction` to repeat your last spawn, respawn the bots, or both
-1. Control `quickAction` using the arrow keys LEFT, RIGHT, DOWN
-1. Arrow key UP to toggle `noclip`
+1. Load Hightower: `ht`
+1. Load different stages (currently only two available): `htez` or `htog`
 
 ## Install
 
@@ -40,13 +34,15 @@
    exec scripts/hightower-practice/load
    ```
 
+   Note that this doesn't make any changes, it just enables the stage aliases (`htez` and `htog`). Loading a stage makes changes.
+
 ### listenserver.cfg
 
 If you already have a `listenserver.cfg` file you'll need to copy the contents of mine and paste it into yours.
 
 ## Use
 
-Load hightower by entering `ht` into the console. Be patient while it loads:
+Load Hightower by entering `ht` into the console. Be patient while it loads:
 
 ```go
 ht
@@ -65,7 +61,14 @@ htog
 
 You can switch between these whenever you want. They change the bots' spawns (in order to practice different jumps).
 
-**Join team RED**.
+## Binds
+
+Enter `ht_binds` to initialize binds. **Careful!** You'll want to go to `defaults.cfg` to ensure you are resetting the binds to whatever you want them to be outside of using this script.
+
+- Teleport around using numpad 0-9 (numpad period `.` to return to spawn)
+- Press `T` for Quick Action: reset you/bots for practicing jumps
+- Control Quick Action using arrow keys LEFT, RIGHT, and DOWN
+- Toggle `noclip` using arrow key UP
 
 ### Numpad
 
@@ -76,7 +79,7 @@ The numpad teleports you around the map to practice different common jumps.
 The numpad period key <kbd>.</kbd> (`KP_DEL`) will teleport you to the RED spawn.
 
 - <kbd>1</kbd> and <kbd>4</kbd> spawn you on the BLU side
-- The keys in the middle: <kbd>0</kbd>, <kbd>2</kbd>, <kbd>5</kbd>, and <kbd>8</kbd> spawn you around the hightower
+- The keys in the middle: <kbd>0</kbd>, <kbd>2</kbd>, <kbd>5</kbd>, and <kbd>8</kbd> spawn you around the Hightower
 - The keys on the right, <kbd>3</kbd>, <kbd>6</kbd>, and <kbd>9</kbd> spawn you on the RED side.
 - <kbd>1</kbd> spawns on the red side for the montage jump
 
