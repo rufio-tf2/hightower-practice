@@ -105,16 +105,14 @@ To change the key to which `quickAction` is bound, edit [quickAction.cfg](./base
 bind T quickAction
 ```
 
-### Defaults
+### Defaults (`defaults.cfg`)
 
-This script usurps a lot of your key bindings:
+You should update [defaults.cfg](./defaults.cfg) to return these keys to the default behavior that you want when not using this script:
 
 - <kbd>T</kbd>
 - <kbd>MOUSE1</kbd> (heals you with every fire)
 - Numpad keys
 - Arrow keys
-
-You should update [defaults.cfg](./defaults.cfg) to return these keys to the default behavior that you want when not using this script.
 
 For example, I use the <kbd>T</kbd> key to toggle my viewmodel.
 
